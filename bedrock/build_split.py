@@ -9,8 +9,11 @@ Rules (written before any output was looked at):
   2. Groups = union of: same study_key; same dup_group (duplicate sections / shared H&E, from the 2026-10-19 check);
      same (study_key, patient) when patient is filled; and for 10x Genomics demo data (id TENX*), same
      (species, organ), because 10x demos of one tissue come from one company and are often adjacent sections.
-  3. A group that contains any slide seen in OmiCLIP pretraining (stbank_overlap) is train-only: it never enters
-     an evaluation fold or the holdout.
+  3. OmiCLIP overlap is decided per slide (revised 2026-10-24, before any model output). A slide is an
+     "OmiCLIP relative" and is never scored if it was seen in OmiCLIP pretraining (stbank_overlap), or shares
+     with a seen slide any of: dup_group, (study_key, patient), 10x series (TENX, same species + organ), or
+     (study_key, species, organ). Relatives still train in the folds where they are not evaluated. Groups stay
+     whole in one fold. A group with no scorable slide is train-only.
   4. Final holdout ~20% of the evaluable groups, stratified by species x platform (organ x species x platform
      leaves most strata with < 3 groups): in every stratum with >= 3 groups, ceil(0.2 * n) groups are drawn.
      Only groups holding <= 5% of the eligible spots can be drawn, so one huge study cannot leave training.
@@ -72,6 +75,19 @@ def build_groups(d):
     return root.map(names)
 
 
+def omiclip_relatives(d):
+    """True for slides seen by OmiCLIP or closely linked to a seen slide (same tissue source)."""
+    uf = UnionFind(d["id"])
+    link_by(uf, d, ["dup_group"])
+    pat = d.assign(patient=d["patient"].str.strip().str.lower().replace("", np.nan))
+    link_by(uf, pat, ["study_key", "patient"])
+    link_by(uf, d[d["id"].str.startswith("TENX")], ["species", "organ"])
+    link_by(uf, d, ["study_key", "species", "organ"])
+    root = d["id"].map(uf.find)
+    seen_roots = set(root[d["stbank_overlap"].astype(bool)])
+    return root.isin(seen_roots)
+
+
 def stratum(d):
     return d["organ"].astype(str) + "|" + d["species"].astype(str) + "|" + d["platform"].astype(str)
 
@@ -88,10 +104,12 @@ def main():
     d = s[s["eligible_adnan"]].merge(m, on="id", how="left")
     d["group"] = build_groups(d)
     d["stratum"] = stratum(d)
+    d["omiclip_relative"] = omiclip_relatives(d)
+    d["scorable"] = ~d["omiclip_relative"]
     d["coarse"] = d["species"].astype(str) + "|" + d["platform"].astype(str)
 
     g = d.groupby("group").agg(
-        stbank=("stbank_overlap", "any"),
+        n_scorable=("scorable", "sum"),
         stratum=("stratum", lambda x: x.mode().iloc[0]),  # majority stratum of the group
         n_slides=("id", "size"),
         coarse=("coarse", lambda x: x.mode().iloc[0]),
@@ -99,7 +117,7 @@ def main():
         old_holdout_clean=("split_v3_2", lambda x: (x == "holdout").all()),
         touched=("split_v3_2", lambda x: x.isin(["val", "test"]).any()),
     )
-    g["train_only"] = g["stbank"]
+    g["train_only"] = g["n_scorable"] == 0
     evaluable = g[~g["train_only"]].copy()
 
     rng = np.random.default_rng(SEED)
@@ -130,9 +148,10 @@ def main():
         pick = rng.choice(train_side, size=max(1, round(SELECT_FRAC * len(train_side))), replace=False)
         g[f"select_f{k}"] = g.index.isin(pick)
 
-    out = d.merge(g.drop(columns=["stratum", "coarse", "spots"]), left_on="group", right_index=True)
+    out = d.merge(g.drop(columns=["stratum", "coarse", "spots", "n_scorable"]), left_on="group", right_index=True)
     cols = ["id", "group", "role", "fold"] + [f"select_f{k}" for k in range(N_FOLDS)] + [
-        "study_key", "organ", "species", "platform", "stratum", "n_spots", "stbank_overlap", "split_v3_2", "dup_group"]
+        "scorable", "omiclip_relative", "study_key", "organ", "species", "platform", "stratum", "n_spots",
+    "stbank_overlap", "split_v3_2", "dup_group"]
     out = out[cols].sort_values(["group", "id"])
     out.to_csv(a.out, index=False)
     md5 = hashlib.md5(open(a.out, "rb").read()).hexdigest()

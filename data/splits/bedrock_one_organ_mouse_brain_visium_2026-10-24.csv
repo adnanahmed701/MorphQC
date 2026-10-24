@@ -1,66 +1,66 @@
-id,group,role,fold_one_organ,study_key,n_spots,stbank_overlap
-MEND123,G003,cv,0,ex st,1459.0,False
-MEND124,G003,cv,0,ex st,1421.0,False
-MEND129,G003,cv,0,ex st,4567.0,False
-MEND130,G003,cv,0,ex st,4545.0,False
-MEND131,G003,cv,0,ex st,1296.0,False
-MEND71,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4110.0,False
-MEND72,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4394.0,False
-MEND73,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4332.0,False
-MEND74,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4513.0,False
-MEND75,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4117.0,False
-MEND76,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4140.0,False
-MEND77,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4488.0,False
-MEND78,G009,train_only,-1,spatially resolved transcriptomic profiling of degraded,4406.0,False
-NCBI658,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3115.0,False
-NCBI659,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3614.0,False
-NCBI660,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3504.0,False
-NCBI661,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3596.0,False
-NCBI662,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3357.0,False
-NCBI663,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2961.0,False
-NCBI664,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2993.0,False
-NCBI665,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2885.0,False
-NCBI666,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3083.0,False
-NCBI667,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2614.0,False
-NCBI668,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2901.0,False
-NCBI669,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3161.0,False
-NCBI670,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3001.0,False
-NCBI671,G028,train_only,-1,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2855.0,False
-NCBI715,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2855.0,False
-NCBI716,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2792.0,False
-NCBI717,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2804.0,False
-NCBI718,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2968.0,False
-NCBI719,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2721.0,False
-NCBI720,G033,cv,1,spatial transcriptomics of the mouse brain across three age groups,2572.0,False
-NCBI799,G043,cv,2,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2633.0,False
-NCBI800,G043,cv,2,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2767.0,False
-NCBI801,G043,cv,2,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2884.0,False
-NCBI802,G043,cv,2,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2733.0,False
-NCBI806,G044,cv,3,regional differential gene expression analyses of brains from four 24w old nf1 mice,1423.0,False
-NCBI807,G044,cv,3,regional differential gene expression analyses of brains from four 24w old nf1 mice,2295.0,False
-NCBI808,G044,cv,3,regional differential gene expression analyses of brains from four 24w old nf1 mice,2356.0,False
-NCBI809,G044,cv,3,regional differential gene expression analyses of brains from four 24w old nf1 mice,1533.0,False
-TENX18,G052,cv,4,mouse brain serial section 1 sagittal anterior,2691.0,False
-TENX19,G052,cv,4,mouse brain serial section 1 sagittal posterior,3345.0,False
-TENX43,G052,cv,4,adult mouse brain ffpe,2261.0,False
-TENX52,G052,cv,4,mouse brain section coronal,2694.0,False
-TENX54,G052,cv,4,mouse brain serial section 2 sagittal posterior,3272.0,False
-TENX55,G052,cv,4,mouse brain serial section 2 sagittal anterior,2813.0,False
-TENX58,G052,cv,4,adult mouse olfactory bulb,1133.0,False
-TENX60,G052,cv,4,mouse brain coronal section 1 ffpe,2290.0,False
-TENX61,G052,cv,4,mouse brain coronal section 2 ffpe,2228.0,False
-TENX67,G052,cv,4,adult mouse brain coronal section fresh frozen 1,2795.0,False
-TENX69,G052,cv,4,fresh frozen visium on cytassist mouse brain probe based whole transcriptome profiling,4287.0,False
-TENX77,G052,cv,4,preservation method comparison on cytassist fixed frozen mouse brain sagittal 11 mm capture area,5076.0,False
-TENX78,G052,cv,4,preservation method comparison on cytassist fresh frozen mouse brain sagittal 11 mm capture area,6933.0,False
-TENX79,G052,cv,4,preservation method comparison on cytassist ffpe mouse brain sagittal 11 mm capture area,8455.0,False
-TENX80,G052,cv,4,adult mouse brain coronal section fresh frozen 2,2690.0,False
-TENX82,G052,cv,4,preservation method comparison on visium cytassist ffpe mouse brain sagittal 11 mm capture area,8462.0,False
-TENX83,G052,cv,4,preservation method comparison on visium cytassist fresh frozen mouse brain sagittal 11 mm capture area,6935.0,False
-TENX84,G052,cv,4,preservation method comparison on visium cytassist fixed frozen mouse brain sagittal 11 mm capture area,5086.0,False
-TENX85,G052,cv,4,visium cytassist gene expression libraries of post xenium mouse brain ff,5300.0,False
-TENX86,G052,cv,4,visium cytassist gene expression libraries of post xenium mouse brain ff,5248.0,False
-TENX87,G052,cv,4,visium cytassist gene expression libraries of post xenium mouse brain ff,5181.0,False
-TENX88,G052,cv,4,visium cytassist gene expression libraries of post xenium mouse brain ff,5297.0,False
-ZEN60,G070,holdout,-1,spotiphy generative modeling in single cell spatial whole transcriptomics,3514.0,False
-ZEN61,G070,holdout,-1,spotiphy generative modeling in single cell spatial whole transcriptomics,3466.0,False
+id,group,role,fold_one_organ,scorable,study_key,n_spots,stbank_overlap
+MEND123,G003,cv,0,True,ex st,1459.0,False
+MEND124,G003,cv,0,True,ex st,1421.0,False
+MEND129,G003,cv,0,True,ex st,4567.0,False
+MEND130,G003,cv,0,True,ex st,4545.0,False
+MEND131,G003,cv,0,True,ex st,1296.0,False
+MEND71,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4110.0,False
+MEND72,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4394.0,False
+MEND73,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4332.0,False
+MEND74,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4513.0,False
+MEND75,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4117.0,False
+MEND76,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4140.0,False
+MEND77,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4488.0,False
+MEND78,G009,cv,1,True,spatially resolved transcriptomic profiling of degraded,4406.0,False
+NCBI658,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3115.0,False
+NCBI659,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3614.0,False
+NCBI660,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3504.0,False
+NCBI661,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3596.0,False
+NCBI662,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3357.0,False
+NCBI663,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2961.0,False
+NCBI664,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2993.0,False
+NCBI665,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2885.0,False
+NCBI666,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3083.0,False
+NCBI667,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2614.0,False
+NCBI668,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2901.0,False
+NCBI669,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3161.0,False
+NCBI670,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,3001.0,False
+NCBI671,G028,cv,2,True,spatial multimodal analysis maldi msi and spatial transcriptomics within the same tissue section,2855.0,False
+NCBI715,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2855.0,False
+NCBI716,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2792.0,False
+NCBI717,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2804.0,False
+NCBI718,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2968.0,False
+NCBI719,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2721.0,False
+NCBI720,G033,cv,3,True,spatial transcriptomics of the mouse brain across three age groups,2572.0,False
+NCBI799,G043,cv,4,True,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2633.0,False
+NCBI800,G043,cv,4,True,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2767.0,False
+NCBI801,G043,cv,4,True,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2884.0,False
+NCBI802,G043,cv,4,True,a novel model of binge ethanol exposure reveals enhanced neurodegeneration with advanced age,2733.0,False
+NCBI806,G044,cv,5,True,regional differential gene expression analyses of brains from four 24w old nf1 mice,1423.0,False
+NCBI807,G044,cv,5,True,regional differential gene expression analyses of brains from four 24w old nf1 mice,2295.0,False
+NCBI808,G044,cv,5,True,regional differential gene expression analyses of brains from four 24w old nf1 mice,2356.0,False
+NCBI809,G044,cv,5,True,regional differential gene expression analyses of brains from four 24w old nf1 mice,1533.0,False
+TENX18,G052,cv,6,True,mouse brain serial section 1 sagittal anterior,2691.0,False
+TENX19,G052,cv,6,True,mouse brain serial section 1 sagittal posterior,3345.0,False
+TENX43,G052,cv,6,True,adult mouse brain ffpe,2261.0,False
+TENX52,G052,cv,6,True,mouse brain section coronal,2694.0,False
+TENX54,G052,cv,6,True,mouse brain serial section 2 sagittal posterior,3272.0,False
+TENX55,G052,cv,6,True,mouse brain serial section 2 sagittal anterior,2813.0,False
+TENX58,G052,cv,6,True,adult mouse olfactory bulb,1133.0,False
+TENX60,G052,cv,6,True,mouse brain coronal section 1 ffpe,2290.0,False
+TENX61,G052,cv,6,True,mouse brain coronal section 2 ffpe,2228.0,False
+TENX67,G052,cv,6,True,adult mouse brain coronal section fresh frozen 1,2795.0,False
+TENX69,G052,cv,6,True,fresh frozen visium on cytassist mouse brain probe based whole transcriptome profiling,4287.0,False
+TENX77,G052,cv,6,True,preservation method comparison on cytassist fixed frozen mouse brain sagittal 11 mm capture area,5076.0,False
+TENX78,G052,cv,6,True,preservation method comparison on cytassist fresh frozen mouse brain sagittal 11 mm capture area,6933.0,False
+TENX79,G052,cv,6,True,preservation method comparison on cytassist ffpe mouse brain sagittal 11 mm capture area,8455.0,False
+TENX80,G052,cv,6,True,adult mouse brain coronal section fresh frozen 2,2690.0,False
+TENX82,G052,cv,6,True,preservation method comparison on visium cytassist ffpe mouse brain sagittal 11 mm capture area,8462.0,False
+TENX83,G052,cv,6,True,preservation method comparison on visium cytassist fresh frozen mouse brain sagittal 11 mm capture area,6935.0,False
+TENX84,G052,cv,6,True,preservation method comparison on visium cytassist fixed frozen mouse brain sagittal 11 mm capture area,5086.0,False
+TENX85,G052,cv,6,True,visium cytassist gene expression libraries of post xenium mouse brain ff,5300.0,False
+TENX86,G052,cv,6,True,visium cytassist gene expression libraries of post xenium mouse brain ff,5248.0,False
+TENX87,G052,cv,6,True,visium cytassist gene expression libraries of post xenium mouse brain ff,5181.0,False
+TENX88,G052,cv,6,True,visium cytassist gene expression libraries of post xenium mouse brain ff,5297.0,False
+ZEN60,G070,cv,7,True,spotiphy generative modeling in single cell spatial whole transcriptomics,3514.0,False
+ZEN61,G070,cv,7,True,spotiphy generative modeling in single cell spatial whole transcriptomics,3466.0,False

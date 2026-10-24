@@ -1,6 +1,7 @@
 """Checks every Bedrock split must pass. Run after any new split; exits non-zero on failure.
 
-  1. No slide seen in OmiCLIP pretraining sits in the holdout or in an evaluation fold.
+  1. No slide seen in OmiCLIP pretraining (or its close relative) is scorable, and train-only groups hold no
+     scorable slide.
   2. No group is spread over more than one role or fold (so duplicate / adjacent sections never cross sets).
   3. Each fold's checkpoint-selection subset never overlaps that fold's evaluation part.
 """
@@ -11,9 +12,12 @@ import pandas as pd
 
 def check(df):
     errors = []
-    bad = df[df["stbank_overlap"] & (df["role"] != "train_only")]
+    bad = df[(df["stbank_overlap"] | df["omiclip_relative"]) & df["scorable"]]
     if len(bad):
-        errors.append(f"{len(bad)} OmiCLIP-seen slides outside train_only: {list(bad.id[:5])}")
+        errors.append(f"{len(bad)} OmiCLIP-seen / relative slides marked scorable: {list(bad.id[:5])}")
+    bad = df[(df["role"] == "train_only") & df["scorable"]]
+    if len(bad):
+        errors.append(f"{len(bad)} scorable slides in train_only groups: {list(bad.id[:5])}")
     spread = df.groupby("group")[["role", "fold"]].nunique()
     spread = spread[(spread["role"] > 1) | (spread["fold"] > 1)]
     if len(spread):
